@@ -1,0 +1,32 @@
+#flower-card {
+    width: 200px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+#flower-picture {
+    width: 100%;
+    height: 105px;
+    object-fit: cover;
+}
+
+#flower-description {
+    padding: 10px;
+    color: #000000;
+}
+
+#flower-description h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.flower-description-line {
+    color: #353535;
+    font-size: 12px;
+    margin: 5px 0;
+}

@@ -1,9 +1,9 @@
 import './Gallery.css'
 
 import { useState, useMemo, useEffect } from "react";
+import Header from './Header.jsx';
+import Footer from './Footer.jsx';
 import flowersData from '../flowersData.js';
-// import FlowerCard from './components/FlowerCard';
-// import favData from './favData.js';
 import FavSlider from './FavSlider.jsx';
 import GalleryOptions from "./GalleryOptions.jsx";
 import GalleryContent from "./GalleryContent.jsx";
@@ -24,21 +24,26 @@ export default function Gallery() {
 
   return (
     <div>
-      <h1>BLOOMY</h1>
+      <Header />
+
       <div id="flower-fav">
         <FavSlider />
       </div >
+
       <GalleryOptions
         search={search}
         flowersSortBy={flowersSortBy}
         onSearchChange={setSearch}
         onFlowersSortByChange={setFlowersSortBy}
       />
+
       <GalleryContent
         flowersData={flowersData}
         search={search}
         flowersSortBy={flowersSortBy}
       />
+
+      <Footer />
 
     </div>
   );

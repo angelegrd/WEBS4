@@ -8,20 +8,32 @@ body {
     padding: 0;
 }
 
-h1 {
-    text-align: center;
-    font-size: 7rem;
-    color: #FADFE6;
+
+.site-header {
     background-color: #FF5883;
-    margin-top: 20px;
-    margin-bottom: 0px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.site-header h1 {
+    font-size: 7rem;
+    margin-top: 0;
+    color: #FADFE6;
+}
+
+.site-footer {
+    background-color: #FADFE6;
+    color: #FF5883;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 60px;
+    font-size: 0.9rem;
 }
 
 #flower-fav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 40px;
 }
 
 #gallery-options {

@@ -13,8 +13,13 @@ export default function GalleryContent({ flowersData, search, flowersSortBy }) {
         result = result.toSorted((a, b) => {
             if (flowersSortBy === "height_cm") {
                 return (a.height_cm) - (b.height_cm);
-            } else {
+            } else if (flowersSortBy === "name") {
                 return a.name.localeCompare(b.name);
+            } else if (flowersSortBy === "random") {
+                result = result
+                    .map(value => ({ value, sort: Math.random() }))
+                    .sort((a, b) => a.sort - b.sort)
+                    .map(({ value }) => value);
             }
         });
         return result;

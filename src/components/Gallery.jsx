@@ -11,7 +11,7 @@ import GalleryContent from "./GalleryContent.jsx";
 
 export default function Gallery() {
   const [search, setSearch] = useState(localStorage.getItem("search") || "");
-  const [flowersSortBy, setFlowersSortBy] = useState(localStorage.getItem("flowersSortBy") || "name");
+  const [flowersSortBy, setFlowersSortBy] = useState(localStorage.getItem("flowersSortBy") || "random");
 
   useEffect(() => {
     localStorage.setItem("search", search)
@@ -24,7 +24,7 @@ export default function Gallery() {
 
   return (
     <div>
-      <h1>Bloomy</h1>
+      <h1>BLOOMY</h1>
       <div id="flower-fav">
         <FavSlider />
       </div >

@@ -17,6 +17,7 @@ export default function GalleryOptions({
             value={flowersSortBy}
             onChange={(e) => onFlowersSortByChange(e.target.value)}
         >
+            <option value="random">Random</option>
             <option value="height_cm">Height</option>
             <option value="name">Name</option>
         </select>

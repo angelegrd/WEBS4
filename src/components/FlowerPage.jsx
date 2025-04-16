@@ -1,6 +1,8 @@
+import "./FlowerPage.css";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import flowersData from "../flowersData";
+
 
 export default function FlowerPage() {
     const [flower, setFlower] = useState(null);
@@ -12,9 +14,9 @@ export default function FlowerPage() {
         if (foundFlower) {
             setFlower(foundFlower);
         } else {
-            setFlower(null);  // Ou gérer un état "not found" pour plus de clarté
+            setFlower(null);
         }
-        setLoading(false);  // Fin du chargement
+        setLoading(false);
     }, [id]);
 
     if (loading) {
@@ -26,18 +28,28 @@ export default function FlowerPage() {
     }
 
     return (
-        <div>
+        <div className="flower-page-container">
             {flower && (
-                <div>
-                    <img src={flower.pictureUrl} alt={flower.name} />
-                    <h2>{flower.name}</h2>
-                    <p>Botanical name: {flower.botanical_name}</p>
-                    <p>Family: {flower.family}</p>
-                    <p>Family common name: {flower.family_common}</p>
-                    <p>Color: {flower.color} & Height : {flower.height_cm} cm</p>
-                    <p>{flower.informations}</p>
+                <div className="flower-details">
+                    <img
+                        src={flower.pictureUrl}
+                        alt={flower.name}
+                        style={{
+                            width: '400px',
+                            height: '300px',
+                            objectFit: 'cover',
+                        }}
+                    />
+                    <div className="flower-text">
+                        <h2>{flower.name}</h2>
+                        <p>Botanical name: {flower.botanical_name}</p>
+                        <p>Family: {flower.family}</p>
+                        <p>Family common name: {flower.family_common}</p>
+                        <p>Color: {flower.color}</p>
+                        <p>Height : {flower.height_cm} cm</p>
+                        <p>{flower.informations}</p>
 
-
+                    </div>
                 </div>
             )}
         </div>

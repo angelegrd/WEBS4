@@ -1,25 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Erica+One&display=swap');
+
 #fav-slider {
-    background-color: #fff;
+    background-color: #FADFE6;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px #951b39;
     width: 1000px;
     margin: 20px auto;
     padding: 20px;
     text-align: center;
 }
 
-/* Titre du slider */
+
 #fav-slider h2 {
-    color: #4CAF50;
+    color: #FF5883;
     margin-bottom: 20px;
 }
 
-/* Image de fond */
+
 #fav-slider .fav-image {
     background: url(${favData[currentIndex].pictureUrl}) no-repeat center center/cover;
     padding: 40px 20px;
     height: 150px;
-    color: white;
+    color: #FADFE6;
     border-radius: 8px;
     margin-bottom: 20px;
 }
@@ -33,12 +35,11 @@
     font-size: 1.1em;
 }
 
-/* Boutons de navigation */
 #fav-slider button {
     padding: 10px 20px;
     font-size: 1.1em;
-    background: #4CAF50;
-    color: white;
+    background: #FF5883;
+    color: #FADFE6;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -47,11 +48,12 @@
 }
 
 #fav-slider button:hover {
-    background: #45a049;
+    background: #951b39;
+    ;
     transform: scale(1.05);
 }
 
 #fav-slider button:disabled {
-    background: #ccc;
+    background: #FF91AD;
     cursor: not-allowed;
 }
